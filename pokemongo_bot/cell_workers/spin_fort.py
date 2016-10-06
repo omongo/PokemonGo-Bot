@@ -168,6 +168,7 @@ class SpinFort(BaseTask):
                     'pokestop_searching_too_often',
                     formatted="Possibly searching too often, take a rest."
                 )
+                sys.exit(0)
                 if spin_result == 1 and not items_awarded and not experience_awarded and not pokestop_cooldown:
                     self.bot.softban = True
                     self.emit_event(
